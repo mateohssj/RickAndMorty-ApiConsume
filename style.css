@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+*{
+    margin:0%;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 10rem;
+    background-image: url("source\img\c2af6da43fc3ec28fe2217bbeeda885b.png");
+    background-size: contain;
+}
+
+h1{
+    font-size: 5rem;
+    text-shadow: 0 0 15px yellow;
+    color: green;
+    animation: titile 1s infinite;
+    font-family: 'Delicious Handrawn', cursive
+}
+
+@keyframes titile {
+    50% {
+        text-shadow: 0 0 15px green;
+        color: yellow;
+    }
+}
+
+hr{
+    width: 90%;
+    margin: 1rem;
+}
+
+img{
+    width: 50%;
+    height: 100%;
+}
+
+main{
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txt-search-character{
+    width: 30rem;
+    height: 1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: gray;
+    padding: 1rem;
+    color: white;
+    font-family: 'Delicious Handrawn', cursive
+}
+
+.container-cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-character{
+    width: 20rem;
+    height: 10rem;
+    background-color: blueviolet;
+    border-radius: black 2px;
+    margin: 2rem;
+    display: flex;
+}
+
+.card-character > .card-desc{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-desc > h2{
+    text-align: center;
+    color: yellow;
+    text-shadow: 0 0 15px white;
+}
+
+.card-desc > p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: blue;
+    margin-top:2rem;
+}
+
+footer{
+    width: 100%;
+    height: 5rem;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+footer > a{
+    color: black;
+}
