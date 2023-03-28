@@ -6,9 +6,15 @@ const txtSearchCharacter = document.getElementById('txt-search-character');
 
 const cardsContainer = document.getElementById('container-cards');
 
-//save the url
+//save the url - this url give us data of every character
 
 const dataUrl = "https://rickandmortyapi.com/api/character";
+
+//save the url - next url let us filter by every character content as we want
+
+const filterByNameUrl = "https://rickandmortyapi.com/api/character/?name="
+const filterByGenderUrl = "https://rickandmortyapi.com/api/character/?gender=";
+const filterByStatusUrl = "https://rickandmortyapi.com/api/character/?status=";
 
 //fetch method to load the cards (async-await)
 
@@ -74,6 +80,36 @@ const generateAllCharacters = async () => {
     dataCharacters.map(character => createCard(character))
 }
 
+//create a function to filter character by name
+
+const filterCharacterByName = async (event) => {
+    cardsContainer.innerHTML = "";
+    const dataFilter = await getApi(filterByNameUrl + event.target.value);
+    dataFilter.map(character => createCard(character));
+}
+
+//create a function to filter character by gender
+
+const filterCharacterByGender = async (event) => {
+    cardsContainer.innerHTML = "";
+    const dataFilter = await getApi(filterByGenderUrl + event.target.value);
+    dataFilter.map(character => createCard(character));
+}
+
+//create a function to filter by status
+
+const filterCharacterByStatus = async (event) => {
+    cardsContainer.innerHTML = "";
+    const dataFilter = await getApi(filterByStatusUrl + event.target.value);
+    dataFilter.map(character => createCard(character));
+}
+
+//function that start the api consume
+
 window.addEventListener('DOMContentLoaded', generateAllCharacters);
 
+//function to start the filter while the input is getting info
 
+txtSearchCharacter.addEventListener('keyup',filterCharacterByName);
+txtSearchCharacter.addEventListener('keyup',filterCharacterByGender);
+txtSearchCharacter.addEventListener('keyup',filterCharacterByStatus);

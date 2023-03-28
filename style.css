@@ -11,12 +11,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("source/img/94a44e36e36278d416c029ad1a4449ea.jpg");
 }
 
 header{
     width: 100%;
     height: 10rem;
-    background-image: url("source\img\c2af6da43fc3ec28fe2217bbeeda885b.png");
     background-size: contain;
 }
 
@@ -25,7 +25,8 @@ h1{
     text-shadow: 0 0 15px yellow;
     color: green;
     animation: titile 1s infinite;
-    font-family: 'Delicious Handrawn', cursive
+    font-family: 'Delicious Handrawn', cursive;
+    margin-bottom: 1rem;
 }
 
 @keyframes titile {
@@ -35,10 +36,7 @@ h1{
     }
 }
 
-hr{
-    width: 90%;
-    margin: 1rem;
-}
+
 
 img{
     width: 100%;
@@ -59,10 +57,13 @@ main{
     height: 1rem;
     font-size: 1.5rem;
     border-radius: 20px;
-    background-color: gray;
+    background-color: black;
     padding: 1rem;
-    color: white;
-    font-family: 'Delicious Handrawn', cursive
+    text-shadow: 0 0 15px yellow;
+    color: green;
+    animation: titile 1s infinite;
+    font-family: 'Delicious Handrawn', cursive;
+    margin-bottom: 2rem;
 }
 
 .container-cards{
@@ -75,13 +76,25 @@ main{
 }
 
 .card-character{
-    width: 10rem;
-    height: 20rem;
-    background-color: blueviolet;
-    border:solid black 2px;
-    /* margin: 2rem; */
+    width: 15rem;
+    height: 30rem;
+    /* flex-grow: 1; */
+    /* object-fit: cover; */
+    opacity: 1;
+    transition: .8 ease;
+    background-color: black;
+    /* border:solid black 2px; */
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.card-character:hover{
+    cursor: crosshair;
+    width: 25rem;
+    height: 50rem;
+    opacity: 1;
+    filter: contrast(120%);
 }
 
 .card-character > .card-desc{
@@ -95,21 +108,25 @@ main{
 .card-desc > h2{
     font-size: 1.5rem;
     text-align: center;
-    color: yellow;
+    text-shadow: 0 0 15px yellow;
+    color: green;
+    animation: titile 1s infinite;
     text-shadow: 0 0 15px white;
 }
 
 .card-desc > p {
     font-size: 1rem;
     text-align: center;
-    color: blue;
+    text-shadow: 0 0 15px yellow;
+    color: green;
+    animation: titile 1s infinite;
     margin-top:1rem;
 }
 
 footer{
     width: 100%;
     height: 5rem;
-    background-color: aquamarine;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,5 +135,9 @@ footer{
 }
 
 footer > a{
-    color: black;
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 2rem;
+    text-shadow: 0 0 15px yellow;
+    color: green;
+    animation: titile 1s infinite;
 }
